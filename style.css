@@ -215,15 +215,22 @@ input[type="range"]:focus::-ms-fill-upper {
 .music-info {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 15px 15px 0 0;
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 20px;
   width: calc(100% - 40px);
+  height: 80%;
   padding: 10px 10px 10px 150px;
   opacity: 0;
   transform: translateY(0%);
   transition: transform 0.3s ease-in, opacity 0.3s ease-in;
   z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .music-container.play .music-info {
