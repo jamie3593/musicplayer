@@ -8,6 +8,7 @@ const progress = document.getElementById("progress");
 const progressContainer = document.getElementById("progress-container");
 const title = document.getElementById("title");
 const cover = document.getElementById("cover");
+const volSlider = document.querySelector(".slider");
 
 // song titles
 const songs = ["pinkwhite", "borntodie", "dynamite"];
@@ -108,3 +109,11 @@ progressContainer.addEventListener("click", setProgress);
 
 // song ends
 audio.addEventListener("ended", nextSong);
+
+volSlider.addEventListener(
+  "input",
+  function () {
+    audio.volume = volSlider.value / 100;
+  },
+  false
+);
